@@ -1,0 +1,41 @@
+subject,number,title,term
+MATH,124,Trigonometry,Fall 2026
+MATH,2,Pre-Calculus,Fall 2026
+MATH,8,College Algebra,Fall 2026
+MATH,C2210,Calculus 1 (formerly 3A),Fall 2026
+MATH,C2220,Calculus 2 (formerly 3B),Fall 2026
+MATH,4A,Calculus 3,Fall 2026
+MATH,6A,Discrete Math for Computer Science 1 (also CS 6A),Fall 2026
+MATH,6B,Discrete Math for Computer Science 2 (also CS 6B),Fall 2026
+MATH,24,Elementary Differential Equations,Fall 2026
+MATH,26,Introduction to Linear Algebra,Fall 2026
+STAT,C1000,Introduction to Statistics,Fall 2026
+PHYS,2A,Introduction to Physics,Fall 2026
+PHYS,4A,General Physics 1,Fall 2026
+PHYS,4B,General Physics 2,Fall 2026
+PHYS,4C,General Physics 3,Fall 2026
+BIO,10,Biochemistry for Health Sciences,Fall 2026
+BIO,11,Human Anatomy,Fall 2026
+BIO,12,Human Physiology,Fall 2026
+BIO,15,General Microbiology,Fall 2026
+CHEM,1A,General Chemistry 1,Fall 2026
+CHEM,1B,General Chemistry 2,Fall 2026
+CHEM,3,Fundamental Chemistry,Fall 2026
+CHEM,4,Introduction to General & Organic Chemistry & Biochemistry,Fall 2026
+CHEM,12A,Organic Chemistry 1,Fall 2026
+CHEM,12B,Organic Chemistry 2,Fall 2026
+CS,10,Introduction to Programming Using Python,Fall 2026
+CS,36,C Programming,Fall 2026
+CS,37,C++ Programming,Fall 2026
+CS,38,Java Programming,Fall 2026
+CS,41,Data Structures,Fall 2026
+CS,40A,Computer Organization and Assembly Language 1,Fall 2026
+CS,40B,Computer Organization and Assembly Language 2,Fall 2026
+ENGR,20,Introduction to Programming and Problem Solving with MATLAB,Fall 2026
+ENGR,23,Engineering Graphics and Descriptive Geometry,Fall 2026
+ENGR,30,Statics of Rigid Bodies and Structures,Fall 2026
+ENGR,70,Introduction to Network Analysis,Fall 2026
+ACCT,1A,Financial Accounting,Fall 2026
+ACCT,1B,Managerial Accounting,Fall 2026
+ECON,C2001,Principles of Microeconomics,Fall 2026
+ECON,C2002,Principles of Macroeconomics,Fall 2026
