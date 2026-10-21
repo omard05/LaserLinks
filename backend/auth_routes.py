@@ -1,11 +1,13 @@
 from datetime import datetime, timedelta, timezone
 
+import jwt
 from fastapi import APIRouter, Depends, HTTPException
+from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 from pydantic import BaseModel
 from sqlalchemy import delete, select
 from sqlalchemy.orm import Session
 
-from auth_utils import codes_match, generate_code, hash_code, is_ivc_email
+from auth_utils import codes_match, create_token, generate_code, hash_code, is_ivc_email, read_token
 from database import get_db
 from models import EmailCode, User
 
@@ -88,4 +90,26 @@ def verify_code(data: VerifyCodeIn, db: Session = Depends(get_db)):
     user.verified = True
     db.delete(record)
     db.commit()
-    return {"verified": True}
+    return {"verified": True, "token": create_token(user.id)}
+
+bearer = HTTPBearer()
+
+
+def get_current_user(
+    creds: HTTPAuthorizationCredentials = Depends(bearer),
+    db: Session = Depends(get_db),
+):
+    try:
+        user_id = read_token(creds.credentials)
+    except jwt.InvalidTokenError:
+        raise HTTPException(status_code=401, detail="Invalid or expired token.")
+
+    user = db.get(User, user_id)
+    if user is None or not user.verified:
+        raise HTTPException(status_code=401, detail="Not logged in.")
+    return user
+
+
+@router.get("/me")
+def me(user: User = Depends(get_current_user)):
+    return {"id": user.id, "name": user.name, "email": user.email}
